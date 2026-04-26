@@ -1,14 +1,23 @@
-# astrbot-plugin-helloworld
+# Luguan
 
-AstrBot 插件模板 / A template plugin for AstrBot plugin feature
+AstrBot plugin for counting the `🦌` emoji.
 
-> [!NOTE]
-> This repo is just a template of [AstrBot](https://github.com/AstrBotDevs/AstrBot) Plugin.
-> 
-> [AstrBot](https://github.com/AstrBotDevs/AstrBot) is an agentic assistant for both personal and group conversations. It can be deployed across dozens of mainstream instant messaging platforms, including QQ, Telegram, Feishu, DingTalk, Slack, LINE, Discord, Matrix, etc. In addition, it provides a reliable and extensible conversational AI infrastructure for individuals, developers, and teams. Whether you need a personal AI companion, an intelligent customer support agent, an automation assistant, or an enterprise knowledge base, AstrBot enables you to quickly build AI applications directly within your existing messaging workflows.
+## Features
 
-# Supports
+- When a user sends a message containing `🦌`, the plugin adds the number of `🦌` emojis in that message to the user's count for the current day.
+- After recording, the plugin sends a calendar image for that user and month. Days without records are blank; days with records show `luguan.png` and the daily count.
+- At 00:05 after the last day of each month, the plugin sends the previous month's ranking to each group where records exist.
 
-- [AstrBot Repo](https://github.com/AstrBotDevs/AstrBot)
-- [AstrBot Plugin Development Docs (Chinese)](https://docs.astrbot.app/dev/star/plugin-new.html)
-- [AstrBot Plugin Development Docs (English)](https://docs.astrbot.app/en/dev/star/plugin-new.html)
+## Data
+
+Plugin data is stored in:
+
+```text
+data/plugin_data/astrbot_plugin_luguan/
+```
+
+Generated images are stored in:
+
+```text
+data/plugin_data/astrbot_plugin_luguan/generated/
+```
